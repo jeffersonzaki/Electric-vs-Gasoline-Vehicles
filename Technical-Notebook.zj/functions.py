@@ -10,17 +10,21 @@ ev_df2 = ev_df2.rename(columns={"Model Year": "Year", "Manufacturer": "Make"})  
 
 # Functions return top 4 luxury car makers
 def audi(df):
-    audi_ev = df.loc[df.Make == "Audi" & (df.Year == 2019)]
+    audi_ev = df.loc[df.Make == "Audi"]
+	audi_ev = audi_ev.loc[audi_ev.Year == 2019]
     return audi_ev
     
 def tesla(df):
-    tesla_ev = df.loc[df.Make == "Tesla" & (df.Year == 2019)]
+    tesla_ev = df.loc[df.Make == "Tesla"]
+	tesla_ev = tesla_ev.loc[tesla_ev.Year == 2019]
     return tesla_ev
     
 def mercedes(df):
-    mercedes_ev = df.loc[df.Make == "Mercedes-Benz" & (df.Year == 2019)]
+    mercedes_ev = df.loc[df.Make == "Mercedes-Benz"]
+	mercedes_ev = mercedes_ev.loc[mercedes_ev.Year == 2019]
     return mercedes_ev
     
 def bmw(df):
-    bmw_ev = df.loc[df.Make == "BMW" & (df.Year == 2019)]
+    bmw_ev = df.loc[df.Make == "BMW"]
+	bmw_ev = bmw_ev.loc[bmw_ev.Year == 2019]
     return bmw_ev
